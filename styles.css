@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center; /* Centers all your main text */
+}
+
+.navbar {
+  background-color: white;
+  display: flex; /* Arranges Logo and Links in a row */
+  justify-content: space-between;
+  align-items: center; /* Vertically centers them */
+  padding: 0 20px; /* Adds space on left and right ends */
+}
+
+.logo img {
+  height: 60px; /* Keeps the icon small and neat */
+  vertical-align: middle; /* Fixes tiny alignment glitches */
+  cursor: pointer;
+  padding-right: 50px;
+}
+.shop img {
+  height: 60px;
+  vertical-align: middle;
+  cursor: pointer;
+  padding-left: 50px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  display: flex;
+}
+
+ul li a {
+  display: block;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+
+.comname {
+  font-size: 60px;
+  font-weight: bold;
+  color: red;
+  margin-left: 10px;
+  text-align: center;
+}
+
+button {
+  border-radius: 5px;
+  border-color: white;
+}
+
+h2 {
+  text-align: center;
+}
+
+.dynamictext {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  color: red;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.login-btn {
+  background-color: #f0f0f0; /* Light grey */
+  border: none;
+  padding: 8px 20px; /* Make it wider */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 15px; /* Space between cart and button */
+}
+
+.login-btn:hover {
+  background-color: #e0e0e0; /* Darker grey on hover */
+}
+
+/* The frame that cuts off the extra images */
+.carousel-container {
+  width: 100%;
+  overflow: hidden; /* Crucial: Hides everything outside the box */
+  position: relative;
+  margin-bottom: 30px; /* Space below the banner */
+}
+
+/* The long strip containing all images */
+.carousel-slide {
+  display: flex; /* Lines images up horizontally */
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out; /* Makes the slide smooth */
+}
+
+/* Force images to fit the screen width */
+.carousel-slide img {
+  width: 100%; /* Tries to fill space */
+  min-width: 100%; /* CRITICAL: Forces image to NEVER shrink below container width */
+  height: 100%; /* Ensures consistent height */
+  object-fit: cover; /* Prevents the image from looking squashed or stretched */
+}
+
+/* Centers the entire typing area */
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; /* Space below the banner */
+  font-family: "Poppins", sans-serif; /* Use your preferred font */
+}
+
+#typing-text {
+  color: red; /* Matches the red text in your image */
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0; /* Remove default margins for better alignment */
+}
+
+/* The blinking cursor styles */
+.cursor {
+  display: inline-block;
+  background-color: red;
+  width: 4px;
+  height: 3rem; /* Match the font-size of the text */
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+/* The blink animation keyframes */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Wrapper to keep layout stable */
+.slide-wrapper {
+  height: 50px; /* Fixed height prevents layout jumping */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hides text when it moves outside */
+}
+
+#slide-text {
+  color: red;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+
+  /* The Magic: Smooth transition settings */
+  opacity: 0;
+  transform: translateY(20px); /* Start slightly below */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* When we add this class via JS, the text appears */
+#slide-text.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to normal position */
+}
+
+.hero-description {
+  max-width: 800px; /* This forces the text to wrap earlier */
+  margin: 20px auto; /* "auto" on left/right centers the block */
+  line-height: 1.6; /* Adds breathing room between the lines */
+  color: #333; /* Optional: Makes it a softer black */
+  padding: 0 15px; /* Prevents text touching edges on mobile screens */
+}
